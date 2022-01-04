@@ -12,7 +12,7 @@ api = tweepy.API(auth)
 FILE = "id.text"
 
 def retrieve_id(file):
-    f_read = open(file. 'r')
+    f_read = open(file, 'r')
     last_seen_id = int(f_read.read().strip())
     f_read.close()
     return last_seen_id
@@ -26,8 +26,8 @@ def retrieve_id(file):
     last_seen_id = retrieve_id(FILE)
     mentions = api.mentions_timeline(last_seen_id, tweet_mode = "extended")
 
-for mentions = api.mentions_timeline(mentions):
-    if "solidity","ETHDEV","Reactjs" in mentio.full_text:
+for mentions in api.mentions_timeline(mentions):
+    if "solidity":"ETHDEV","Reactjs" in mentio.full_text:
         store_id(last_seen_id, FILE)
         api.update_status('@'+mention.user.screen_name + 'The future is here, learning is important', mentions)
         print('replied to @' + mention.user.screen_name)
